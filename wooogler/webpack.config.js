@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [],
   output: {
-    filename: '[name].js',
+    filename: 'app.js',
     path: path.join(__dirname, 'dist')
   }
 }

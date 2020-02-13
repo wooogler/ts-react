@@ -76,7 +76,7 @@ const NumberBaseball = () => {
         }
       }
     }
-  }, [])
+  }, [value,answer]);
 
   return (
     <>

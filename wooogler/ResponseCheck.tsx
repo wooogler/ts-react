@@ -19,7 +19,7 @@ const ResponseCheck = () => {
       setState('ready');
       setMessage('초록색이 되면 클릭하세요.');
     } else if (state === 'ready') { // 성급하게 클릭
-      if(timeout.current) {
+      if (timeout.current) {
         clearTimeout(timeout.current);
       }
       setState('waiting');
@@ -60,3 +60,5 @@ const ResponseCheck = () => {
     </>
   );
 }
+
+export default ResponseCheck;

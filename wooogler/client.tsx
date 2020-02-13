@@ -5,8 +5,9 @@ import GuGuDanClass from './GuGuDanClass';
 import WordRelay from './WordRelay';
 import NumberBaseball from './NumberBaseball';
 import ResponseCheck from './ResponseCheckClass';
+import RSP from './RSP';
 import { hot } from 'react-hot-loader/root';
 
-const Hot = hot(ResponseCheck);
+const Hot = hot(RSP);
 
 ReactDOM.render(<Hot />, document.querySelector('#root'));

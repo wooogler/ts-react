@@ -7,8 +7,9 @@ import NumberBaseball from './NumberBaseball';
 import ResponseCheck from './ResponseCheckClass';
 import RSP from './RSP';
 import Lotto from './LottoClass';
+import TicTacToe from './TicTacToe';
 import { hot } from 'react-hot-loader/root';
 
-const Hot = hot(Lotto);
+const Hot = hot(TicTacToe);
 
 ReactDOM.render(<Hot />, document.querySelector('#root'));

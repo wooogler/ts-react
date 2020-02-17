@@ -1,25 +1,23 @@
 import * as React from 'react';
-import {Dispatch, FC, useMemo} from 'react';
+import {TableContext} from './MineSearch';
+import {useContext, memo, FC} from 'react';
 import Td from './Td';
 
 interface Props {
-  rowData: string[];
   rowIndex: number;
-  dispatch: Dispatch<any>
 }
 
-const Tr:FC<Props> = ({rowData, rowIndex, dispatch}) => {
+const Tr:FC<Props> = memo(({ rowIndex }) => {
+  const { tableData } = useContext(TableContext);
+
   return (
     <tr>
-      {Array(rowData.length).fill(null).map((td, i) => (
-        useMemo(
-          () => <Td key={i} dispatch={dispatch} rowIndex={rowIndex} cellIndex={i} cellData={rowData[i]}>{''}</Td>,
-          [rowData[i]],
-        )
-      ))}
+      {tableData[0] && Array(tableData[0].length).fill(null).map((td, i) =>
+        <Td key={i} rowIndex={rowIndex} cellIndex={i} />
+      )}
     </tr>
   )
-}
+});
 
 
 export default Tr;

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": [
+      "ES5",
+      "ES2015",
+      "DOM",
+      "ES2016"
+    ],
+    "jsx": "react"
+  }
+}

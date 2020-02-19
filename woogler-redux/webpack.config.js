@@ -4,7 +4,7 @@ module.exports ={
   mode: 'development',
   devtool: 'eval',
   resolve: {
-    extensions: ['.jsx','.js','.tsx','ts'],
+    extensions: ['.jsx','.js','.tsx','.ts'],
   },
   entry: {
     app: './client',
@@ -18,7 +18,7 @@ module.exports ={
   plugins: [],
   output: {
     filename: 'app.js',
-    path: path.join(__dirname, 'dist');
+    path: path.join(__dirname, 'dist'),
     publicPath: '/dist',
   }
 }

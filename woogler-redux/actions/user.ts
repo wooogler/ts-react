@@ -48,13 +48,14 @@ export interface LogOutAction {
 
 
 
-interface ThunkDispatch {
+export interface ThunkDispatch {
   (thunkAction: ThunkAction): void; //return 이 없는 경우
   <A>(action: A): A; //return 이 있는 경우
   <TAction>(action: TAction | ThunkAction): TAction;
 }
 
 type ThunkAction = (dispatch: ThunkDispatch) => void;
+
 export const logIn = (data: LogInRequestAction["data"]): ThunkAction => {
   return (dispatch) => {
     dispatch(logInRequest(data));
